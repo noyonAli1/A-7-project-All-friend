@@ -9,8 +9,8 @@ KeenKeeper is a fully responsive React-based web application designed to make fr
 Whether on mobile, tablet, or desktop, the application delivers a smooth and engaging user experience across all devices.
 
 🚀 Live Preview
-🔗 Live Website: https://keen-keeper-seven-peach.vercel.app/
-📂 Source Code: https://github.com/MdOnim/Assignment-07.git
+🔗 Live Website: 
+📂 Source Code:
 🛠️ Technologies Used
 React.js
 React Router DOM
