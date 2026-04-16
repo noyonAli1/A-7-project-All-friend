@@ -40,9 +40,6 @@ const FriendsDetails = () => {
 
 
 
-
-
-
   return (
     <div className="">
       <div className="bg-[#f8fafb] min-h-screen py-20">
@@ -129,7 +126,7 @@ const FriendsDetails = () => {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 text-center">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
                   <h2 className="text-3xl font-bold text-[#1a4d40]">
                     {/* {expectedfriend?.next_due_date} */}
                     {new Date().toISOString().split("T")[0]}

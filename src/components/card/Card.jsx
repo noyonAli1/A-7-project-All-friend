@@ -8,8 +8,8 @@ const Card = ({ friend }) => {
 
 
   return (
-    <div>   
-      <Link to={`/friendsdetails/${friend.id}`} className="card w-full bg-white shadow-sm border border-gray-300 rounded-2xl">
+    <div >   
+      <Link to={`/friendsdetails/${friend.id}`} className="card w-full hover:bg-gray-100 hover:mt-0.4 bg-white shadow-sm border border-gray-300 rounded-2xl">
         <div className="card-body items-center text-center p-6">
           <div className="avatar mb-2">
             <div className="w-20 rounded-full">
