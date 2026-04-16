@@ -9,8 +9,8 @@ KeenKeeper is a fully responsive React-based web application designed to make fr
 Whether on mobile, tablet, or desktop, the application delivers a smooth and engaging user experience across all devices.
 
 🚀 Live Preview
-🔗 Live Website:  
-📂 Source Code: 
+🔗 Live Website: incandescent-croquembouche-cef28f.netlify.app 
+📂 Source Code: https://github.com/noyonAli1/A-7-project-All-friend
 🛠️ Technologies Used
 React.js
 React Router DOM
