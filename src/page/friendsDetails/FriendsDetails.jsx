@@ -13,42 +13,42 @@ import { toast } from "react-toastify";
 
 const FriendsDetails = () => {
   const { id } = useParams();
-  const { friends} = useFriendsdata();
+  const { friends } = useFriendsdata();
 
-const expectedfriend = friends.find((friend) => friend.id === parseInt(id));
-    
-
-
-const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVideoCallFriend} = useContext(FriendsContext);
+  const expectedfriend = friends.find((friend) => friend.id === parseInt(id));
 
 
 
-  const handleCallFriend = () =>{
-    setCallFriend([...callFriend,expectedfriend])
-    toast.success(`Call with ${expectedfriend?.name}`) 
+  const { callFriend, setCallFriend, textFriend, setTextFriend, videocallFriend, setVideoCallFriend } = useContext(FriendsContext);
+
+
+
+  const handleCallFriend = () => {
+    setCallFriend([...callFriend, expectedfriend])
+    toast.success(`Call with ${expectedfriend?.name}`)
   }
 
-  const handleTextFriend = () =>{
-    setTextFriend([...textFriend,expectedfriend])
+  const handleTextFriend = () => {
+    setTextFriend([...textFriend, expectedfriend])
     toast.success(`Text with ${expectedfriend?.name}`)
   }
 
-  const handleVideoCallFriend = () =>{
-    setVideoCallFriend([...videocallFriend,expectedfriend])
+  const handleVideoCallFriend = () => {
+    setVideoCallFriend([...videocallFriend, expectedfriend])
     toast.success(`Video call with ${expectedfriend?.name}`)
   }
- 
 
 
 
 
-    
+
+
   return (
-    <div>
-      <div className="bg-[#f8fafb] min-h-screen">
+    <div className="">
+      <div className="bg-[#f8fafb] min-h-screen py-20">
         <div className="max-w-7xl mx-auto p-6">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            
+
             <div className="space-y-4">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
                 <img
@@ -63,16 +63,16 @@ const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVide
 
                 <div className="flex flex-col items-center gap-2 mt-3">
                   <div className="card-actions">
-          <div className={`badge border-none text-white text-[10px] font-bold py-3.5 px-5 rounded-full uppercase tracking-wider 
-            ${expectedfriend?.status === "Overdue" ? "bg-[#EF4444]" : ""}
-            ${expectedfriend?.status === "On-Track" ? "bg-[#064E3B]" : ""}
-            ${expectedfriend?.status === "Almost Due" ? "bg-[#F59E0B]" : ""}
+                    <div className={`badge border-none text-white text-[10px] font-bold py-3.5 px-5 rounded-full uppercase tracking-wider 
+                      ${expectedfriend?.status === "Overdue" ? "bg-[#EF4444]" : ""}
+                      ${expectedfriend?.status === "On-Track" ? "bg-[#064E3B]" : ""}
+                      ${expectedfriend?.status === "Almost Due" ? "bg-[#F59E0B]" : ""}
             
             
             `}>
-            {expectedfriend?.status}
-          </div>
-        </div>
+                      {expectedfriend?.status}
+                    </div>
+                  </div>
                   <div className="flex flex-wrap justify-center gap-2 mb-4">
                     {expectedfriend?.tags.map((tag, index) => (
                       <div
@@ -95,25 +95,25 @@ const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVide
                 </p>
               </div>
 
-          
+
               <div className="space-y-3">
-                <button className="btn btn-outline w-full bg-white border-gray-200 text-gray-700 normal-case font-bold">
-                  <MdOutlineNotificationsPaused size={20} /> Snooze 2 Weeks
+                <button className="btn btn-outline w-full bg-white border-gray-200 text-gray-700 normal-case font-bold py-6">
+                  <MdOutlineNotificationsPaused size={25} /> Snooze 2 Weeks
                 </button>
 
-                <button className="btn btn-outline w-full bg-white border-gray-200 text-gray-700 normal-case font-bold">
-                    <FiArchive /> Archive
+                <button className="btn btn-outline w-full bg-white border-gray-200 text-gray-700 normal-case font-bold py-6">
+                  <FiArchive size={20} /> Archive
                 </button>
 
-                <button className="btn  w-full bg-white normal-case font-bold border-gray-100">
-                  <MdOutlineDeleteForever size={20} className=" text-red-400" /> Delete
+                <button className="btn btn-error w-full bg-white normal-case font-bold border-gray-100 hover:bg-red-200 py-6">
+                  <MdOutlineDeleteForever size={25} className="text-red-500" /> Delete
                 </button>
               </div>
             </div>
 
-          
+
             <div className="lg:col-span-3 space-y-6">
-          
+
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
                   <h2 className="text-4xl font-bold text-[#1a4d40]">{expectedfriend?.days_since_contact}</h2>
@@ -140,7 +140,7 @@ const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVide
                 </div>
               </div>
 
-             
+
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex justify-between items-center">
                 <div>
                   <h2 className="text-lg font-bold text-[#1a4d40]">
@@ -157,24 +157,24 @@ const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVide
                 </button>
               </div>
 
-             
+
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
                 <h2 className="text-lg font-bold text-[#1a4d40] mb-8">
                   Quick Check-In
                 </h2>
 
-                <div  className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <button onClick={handleCallFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <button onClick={handleCallFriend} className="btn btn-ghost  border-gray-300 h-auto flex flex-col items-center justify-center border  bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><FiPhoneCall /></span>
                     <span className="font-bold text-gray-700">Call</span>
                   </button>
 
-                  <button onClick={handleTextFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                  <button onClick={handleTextFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-300 bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><MdOutlineTextsms /></span>
                     <span className="font-bold text-gray-700">Text</span>
                   </button>
 
-                  <button onClick={handleVideoCallFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                  <button onClick={handleVideoCallFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-300 bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><IoVideocamOutline /></span>
                     <span className="font-bold text-gray-700">Video</span>
                   </button>

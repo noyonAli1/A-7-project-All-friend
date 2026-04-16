@@ -13,7 +13,7 @@ const Root = () => {
             <Outlet></Outlet>
             </main>
           {/* footer section */}
-            <Footer></Footer>
+            <Footer></Footer> 
         </div>
     );
 };
