@@ -50,7 +50,7 @@ const FriendsDetails = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
             <div className="space-y-4">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 text-center">
                 <img
                   src={expectedfriend?.picture}
                   alt="Emma Wilson"
@@ -115,21 +115,21 @@ const FriendsDetails = () => {
             <div className="lg:col-span-3 space-y-6">
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 text-center">
                   <h2 className="text-4xl font-bold text-[#1a4d40]">{expectedfriend?.days_since_contact}</h2>
                   <p className="text-gray-400 text-sm mt-3 font-medium">
                     Days Since Contact
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 text-center">
                   <h2 className="text-4xl font-bold text-[#1a4d40]">{expectedfriend?.goal}</h2>
                   <p className="text-gray-400 text-sm mt-3 font-medium">
                     Goal (Days)
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 text-center">
                   <h2 className="text-3xl font-bold text-[#1a4d40]">
                     {/* {expectedfriend?.next_due_date} */}
                     {new Date().toISOString().split("T")[0]}
@@ -141,7 +141,7 @@ const FriendsDetails = () => {
               </div>
 
 
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex justify-between items-center">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8 flex justify-between items-center">
                 <div>
                   <h2 className="text-lg font-bold text-[#1a4d40]">
                     Relationship Goal
@@ -158,7 +158,7 @@ const FriendsDetails = () => {
               </div>
 
 
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-300 p-8">
                 <h2 className="text-lg font-bold text-[#1a4d40] mb-8">
                   Quick Check-In
                 </h2>
